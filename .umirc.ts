@@ -50,19 +50,12 @@ export default defineConfig({
       menuHeaderRender: false,
       hideInMenu: true,
     },
-    // {
-    //   name: '我的主页',
-    //   path: '/:objectId',
-    //   component: './UserIndex',
-    //   hideInMenu: true
-    // },
-  ],
-  proxy: {
-    '/1.1': {
-      target: 'https://4lnry9uq.lc-cn-n1-shared.com',
-      changeOrigin: true,
+    {
+      path: '/user/:objectId',
+      component: './Detail',
+      hideInMenu: true,
     },
-  },
+  ],
   npmClient: 'pnpm',
   define: {
     'process.env.APP_ID': '4LnrY9uqqvki34G9kxvUH644-gzGzoHsz',

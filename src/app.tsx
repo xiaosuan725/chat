@@ -25,6 +25,7 @@ export const request: RequestConfig = {
   requestInterceptors: [
     (options: any) => {
       // 拦截请求配置，进行个性化处理。
+      options.url = 'https://4lnry9uq.lc-cn-n1-shared.com' + options.url;
       options.headers = {
         'X-LC-Id': process.env.APP_ID,
         'X-LC-Key': process.env.APP_KEY,
