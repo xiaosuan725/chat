@@ -8,24 +8,14 @@ declare namespace API {
     createdAt: Date;
   }
 
-  interface Result<T> {
-    data: T & CommonInfo;
-  }
-
-  interface Pagination_Result<T> {
-    data: {
-      results: (T & CommonInfo)[];
-      count: number;
-    };
-  }
-
-  interface UserInfoV0 {
+  interface UserInfoV0 extends CommonInfo {
     shortId?: string;
-    confirm: string;
+    confirm?: string;
     email: string;
     sessionToken: string;
     phone: string;
     username: string;
+    nickName: string;
     agreement: boolean;
     prefix: string;
     emailVerified: boolean;

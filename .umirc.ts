@@ -50,16 +50,6 @@ export default defineConfig({
       menuHeaderRender: false,
       hideInMenu: true,
     },
-    {
-      name: '注册成功',
-      path: '/register/success',
-      component: './Result/successRegister',
-      headerRender: false,
-      footerRender: false,
-      menuRender: false,
-      menuHeaderRender: false,
-      hideInMenu: true,
-    },
     // {
     //   name: '我的主页',
     //   path: '/:objectId',

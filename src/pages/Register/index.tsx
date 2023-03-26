@@ -7,6 +7,7 @@ import {
 import { ProCard } from '@ant-design/pro-components';
 import { registerUser } from '@/services/webapi/UserController';
 import { history, useMutation } from '@umijs/max';
+import { ArrowLeftOutlined } from '@ant-design/icons';
 
 const { Option } = Select;
 
@@ -91,7 +92,15 @@ const App: React.FC = () => {
 
   return (
     <ProCard
-      title="注册表单"
+      title={
+        <div>
+          <ArrowLeftOutlined
+            onClick={() => window.history.back()}
+            style={{ marginRight: 8 }}
+          />
+          注册表单
+        </div>
+      }
       headerBordered
       bordered
       style={{ minHeight: '100vh', maxWidth: '850px', margin: '0 auto' }}
@@ -163,12 +172,26 @@ const App: React.FC = () => {
 
         <Form.Item
           name="username"
+          label="用户名"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your username!',
+              whitespace: true,
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          name="nickName"
           label="昵称"
           tooltip="What do you want others to call you?"
           rules={[
             {
               required: true,
-              message: 'Please input your username!',
+              message: 'Please input your nickName!',
               whitespace: true,
             },
           ]}

@@ -1,30 +1,16 @@
 import { LoginFormPage } from '@ant-design/pro-components';
-import { message, Tabs } from 'antd';
+import { Tabs } from 'antd';
 import { useState } from 'react';
 import { AccountLoginForm } from './components/AccountLoginForm';
 import { PhoneLoginForm } from './components/PhoneLoginForm';
-import { history, useModel, useRequest } from '@umijs/max';
-import { loginUser } from '@/services/webapi/LoginController';
+import { history, useModel } from '@umijs/max';
 
 type LoginType = 'phone' | 'account';
 
 export default () => {
   const [loginType, setLoginType] = useState<LoginType>('account');
-  const { getUser } = useModel('user');
+  const { runLoginUser } = useModel('user');
 
-  const { run: runLoginUser } = useRequest(loginUser, {
-    manual: true,
-    debounceInterval: 300,
-    onSuccess(r) {
-      localStorage.setItem('sessionToken', r.sessionToken);
-      setTimeout(() => {
-        getUser();
-      }, 0);
-      message.success('登录成功', 0.5, () => {
-        history.push('/home');
-      });
-    },
-  });
   const onFinish = async (values: API.EmailLoginV0) => {
     runLoginUser(values);
   };

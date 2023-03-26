@@ -71,12 +71,12 @@ const HomePage: React.FC = () => {
   const items: TabsProps['items'] = [
     {
       key: '1',
-      label: '我关注的',
+      label: '为你推荐',
       children: `Content of Tab Pane 1`,
     },
     {
       key: '2',
-      label: '我发布的',
+      label: '我关注的',
     },
   ];
   return (

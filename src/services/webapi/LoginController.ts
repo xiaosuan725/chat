@@ -6,7 +6,7 @@ export async function loginUser(
   options?: { [key: string]: any },
 ) {
   // return request<API.Result_PageInfo_UserInfo__>('/1.1/users', {
-  return request<API.Result<API.UserInfoV0>>('/1.1/login', {
+  return request<API.UserInfoV0>('/1.1/login', {
     method: 'POST',
     data: {
       ...body,
