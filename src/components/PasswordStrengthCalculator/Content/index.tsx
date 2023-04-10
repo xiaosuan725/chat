@@ -1,11 +1,7 @@
-import {
-  CheckCircleFilled,
-  CloseCircleFilled,
-  LoadingOutlined,
-} from '@ant-design/icons';
 import { Progress, Space } from 'antd';
 import { Validator } from '..';
 import styles from './style.less';
+import { Icon } from '@umijs/max';
 
 type ValidateStatus = 'success' | 'error' | 'wait';
 
@@ -18,8 +14,15 @@ const Circle = () => (
 );
 
 const statusIconMap = {
-  error: <CloseCircleFilled style={{ color: colors.RED }} />,
-  success: <CheckCircleFilled style={{ color: colors.GREEN }} />,
+  error: (
+    <Icon icon="ant-design:close-circle-filled" style={{ color: colors.RED }} />
+  ),
+  success: (
+    <Icon
+      icon="ant-design:check-circle-filled"
+      style={{ color: colors.GREEN }}
+    />
+  ),
   wait: <Circle />,
 };
 
@@ -81,7 +84,11 @@ export const Content: React.FC<{
           return (
             <li key={idx} style={{ display: 'flex', alignItems: 'center' }}>
               <Space>
-                {isValidating ? <LoadingOutlined /> : statusIconMap[status]}
+                {isValidating ? (
+                  <Icon icon="ant-design:loading-outlined" />
+                ) : (
+                  statusIconMap[status]
+                )}
                 <span
                   style={{ color: 'rgba(0,0,0,0.65)', whiteSpace: 'nowrap' }}
                 >

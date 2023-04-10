@@ -7,7 +7,7 @@ import {
 import { ProCard } from '@ant-design/pro-components';
 import { registerUser } from '@/services/webapi/UserController';
 import { history, useMutation } from '@umijs/max';
-import { ArrowLeftOutlined } from '@ant-design/icons';
+import { Icon } from '@umijs/max';
 
 const { Option } = Select;
 
@@ -94,9 +94,10 @@ const App: React.FC = () => {
     <ProCard
       title={
         <div>
-          <ArrowLeftOutlined
+          <Icon
             onClick={() => window.history.back()}
             style={{ marginRight: 8 }}
+            icon="ant-design:arrow-left-outlined"
           />
           注册表单
         </div>

@@ -1,5 +1,5 @@
-import { LockOutlined, MobileOutlined } from '@ant-design/icons';
 import { ProFormCaptcha, ProFormText } from '@ant-design/pro-components';
+import { Icon } from '@umijs/max';
 import { message } from 'antd';
 import React from 'react';
 
@@ -9,7 +9,9 @@ export const PhoneLoginForm: React.FC = () => {
       <ProFormText
         fieldProps={{
           size: 'large',
-          prefix: <MobileOutlined className={'prefixIcon'} />,
+          prefix: (
+            <Icon icon="ant-design:mobile-outlined" className={'prefixIcon'} />
+          ),
         }}
         name="mobile"
         placeholder={'手机号'}
@@ -27,7 +29,9 @@ export const PhoneLoginForm: React.FC = () => {
       <ProFormCaptcha
         fieldProps={{
           size: 'large',
-          prefix: <LockOutlined className={'prefixIcon'} />,
+          prefix: (
+            <Icon icon="ant-design:lock-outlined" className={'prefixIcon'} />
+          ),
         }}
         captchaProps={{
           size: 'large',

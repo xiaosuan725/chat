@@ -19,6 +19,8 @@
     "leancloud-storage": "^4.14.0"
   },
   "devDependencies": {
+    "@iconify-json/ant-design": "1.1.5",
+    "@iconify-json/fa": "1.1.4",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "husky": "^8.0.1",

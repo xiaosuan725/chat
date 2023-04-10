@@ -2,7 +2,7 @@ import { Link } from '@umijs/max';
 import { useModel } from '@umijs/max';
 import { Avatar, Dropdown, MenuProps, Space } from 'antd';
 import React from 'react';
-import { UserOutlined } from '@ant-design/icons';
+import { Icon } from '@umijs/max';
 
 export const RightUserActions: React.FC = () => {
   const { user, isLogin, runLoginOut, loading } = useModel('user');
@@ -33,7 +33,7 @@ export const RightUserActions: React.FC = () => {
             <Avatar
               size="small"
               style={{ marginRight: 8 }}
-              icon={<UserOutlined />}
+              icon={<Icon icon="ant-design:user-outlined" />}
             />
             {user?.nickName}
           </span>

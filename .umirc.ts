@@ -62,4 +62,5 @@ export default defineConfig({
     'process.env.APP_KEY': 'HX7FFlFQSSmk12yBKejcHM1n',
   },
   reactQuery: {},
+  icons: {},
 });

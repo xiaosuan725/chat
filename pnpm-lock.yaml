@@ -3,6 +3,8 @@ lockfileVersion: 5.3
 specifiers:
   '@ant-design/icons': ^4.7.0
   '@ant-design/pro-components': ^2.0.1
+  '@iconify-json/ant-design': 1.1.5
+  '@iconify-json/fa': 1.1.4
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
   '@umijs/max': ^4.0.53
@@ -25,6 +27,8 @@ dependencies:
   leancloud-storage: 4.14.0
 
 devDependencies:
+  '@iconify-json/ant-design': 1.1.5
+  '@iconify-json/fa': 1.1.4
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   husky: 8.0.3
@@ -2867,9 +2871,20 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: false
 
+  /@iconify-json/ant-design/1.1.5:
+    resolution: {integrity: sha512-lNEC95u9QdmS3GfMLnbAjLZCfQ9i4xURyn7P4UVHa6ejjLjs5FVyi/J+itrmnBpwb36YZo4CT0GDIn2AgvkNng==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/fa/1.1.4:
+    resolution: {integrity: sha512-A7FAeKvR8BP8c2oFgryGLTBkH3FwiSwf3t9RpPkxA3eMyoO2sTpRQqj+BuxU+oxUzAP22Ylz7rEKB/U0QODrHA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: false
 
   /@iconify/utils/2.1.1:
     resolution: {integrity: sha512-H8xz74JDzDw8f0qLxwIaxFMnFkbXTZNWEufOk3WxaLFHV4h0A2FjIDgNk5LzC0am4jssnjdeJJdRs3UFu3582Q==}

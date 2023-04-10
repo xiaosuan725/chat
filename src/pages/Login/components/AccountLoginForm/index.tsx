@@ -1,25 +1,11 @@
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { ProFormText } from '@ant-design/pro-components';
+import { Icon } from '@umijs/max';
 import { Form, Input } from 'antd';
 import React from 'react';
 
 export const AccountLoginForm: React.FC = () => {
   return (
     <>
-      {/* <ProFormText
-      name="username"
-      fieldProps={{
-        size: 'large',
-        prefix: <UserOutlined className={'prefixIcon'} />,
-      }}
-      placeholder={'用户名: admin or user'}
-      rules={[
-        {
-          required: true,
-          message: '请输入用户名!',
-        },
-      ]}
-    /> */}
       <Form.Item
         name="email"
         rules={[
@@ -35,7 +21,9 @@ export const AccountLoginForm: React.FC = () => {
       >
         <Input
           size="large"
-          prefix={<UserOutlined className={'prefixIcon'} />}
+          prefix={
+            <Icon icon="ant-design:user-outlined" className={'prefixIcon'} />
+          }
           placeholder={'邮箱: name@email.com'}
         />
       </Form.Item>
@@ -43,7 +31,9 @@ export const AccountLoginForm: React.FC = () => {
         name="password"
         fieldProps={{
           size: 'large',
-          prefix: <LockOutlined className={'prefixIcon'} />,
+          prefix: (
+            <Icon icon="ant-design:lock-outlined" className={'prefixIcon'} />
+          ),
         }}
         placeholder={'密码: password'}
         rules={[
