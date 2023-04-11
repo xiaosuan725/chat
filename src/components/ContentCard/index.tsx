@@ -1,4 +1,4 @@
-import { Card, Avatar, Space } from 'antd';
+import { Card, Space } from 'antd';
 import React from 'react';
 import { Icon } from '@umijs/max';
 
@@ -11,7 +11,6 @@ type Props = {
 };
 
 export const ContentCard: React.FC<Props> = ({
-  avatarUrl,
   username,
   createAt,
   description,
@@ -19,7 +18,8 @@ export const ContentCard: React.FC<Props> = ({
   return (
     <Card style={{ marginBottom: 8 }}>
       <Meta
-        avatar={<Avatar src={avatarUrl} />}
+        // avatar={<Avatar src={avatarUrl} />}
+
         title={
           <div style={{ display: 'flex', alignItems: 'baseline' }}>
             <div>{username}</div>
