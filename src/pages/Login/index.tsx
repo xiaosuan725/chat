@@ -18,7 +18,7 @@ export default () => {
     <div style={{ backgroundColor: 'white', height: '100vh' }}>
       <LoginFormPage
         backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
-        logo="http://lc-hJZjFmDL.cn-n1.lcfile.com/bpfBETN9BcwikEohxSQi4R4jwwFC951N/favicon.png"
+        logo="http://lc-4LnrY9uq.cn-n1.lcfile.com/YXGbpxaYdUU8q7Wp8TaTBDRiud7w79x0/favicon.png"
         title="Cheerless"
         subTitle="为什么西瓜这么贵"
         onFinish={onFinish}
